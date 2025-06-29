@@ -1,4 +1,4 @@
-import { fmt, FormattedString, blockquote, bold, code, customEmoji, expandableBlockquote, italic, link, linkMessage, mentionUser, pre, spoiler, strikethrough, underline } from "npm:@grammyjs/parse-mode";
+import { fmt, type FormattedString, blockquote, bold, code, customEmoji, expandableBlockquote, italic, link, linkMessage, mentionUser, pre, spoiler, strikethrough, underline } from "npm:@grammyjs/parse-mode@latest";
 
 export const jsxr = (tree: JSX.PrerenderNode[]) => {
 

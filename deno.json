@@ -1,6 +1,6 @@
 {
     "name": "@xlsft/grammy-jsx",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "license": "MIT",
     "tasks": {
         "dev": "deno run -A --watch example.tsx"
@@ -15,5 +15,6 @@
     "exports": {
         ".": "./runtime/jsx.runtime.ts",
         "./types": "./runtime/jsx.d.ts"
-    }
+    },
+    "types": ["./runtime/jsx.d.ts"]
 }
