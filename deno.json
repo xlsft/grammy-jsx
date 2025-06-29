@@ -1,0 +1,18 @@
+{
+    "name": "@xlsft/grammy-jsx",
+    "version": "0.1.0",
+    "tasks": {
+        "dev": "deno run -A --watch example.tsx"
+    },
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "jsxImportSource": "./runtime"
+    },
+    "imports": {
+        "./runtime/jsx-runtime": "./runtime/jsx.runtime.ts"
+    },
+    "exports": {
+        ".": "./runtime/jsx.runtime.ts",
+        "./types": "./runtime/jsx.d.ts"
+    }
+}
