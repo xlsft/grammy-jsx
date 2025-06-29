@@ -1,6 +1,7 @@
 {
     "name": "@xlsft/grammy-jsx",
     "version": "0.1.0",
+    "license": "MIT",
     "tasks": {
         "dev": "deno run -A --watch example.tsx"
     },
