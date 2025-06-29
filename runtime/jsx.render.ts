@@ -1,7 +1,23 @@
+/**
+ * Grammy JSX render
+ */
+
 import { fmt, type FormattedString, blockquote, bold, code, customEmoji, expandableBlockquote, italic, link, linkMessage, mentionUser, pre, spoiler, strikethrough, underline } from "npm:@grammyjs/parse-mode@latest";
 
+/**
+ * Renders a JSX tree into a formatted Telegram message string
+ * @param tree - Array of JSX nodes to render
+ * @returns A formatted string ready to be sent as a Telegram message
+ */
 export const jsxr = (tree: JSX.PrerenderNode[]) => {
 
+    /**
+     * Formats a content string with the specified formatting type
+     * @param type - The HTML element type or 'text'
+     * @param content - The content to format
+     * @param props - Additional properties for formatting (href, lang, etc)
+     * @returns A formatted string with appropriate Telegram formatting
+     */
     const chunk = (
         type: keyof JSX.IntrinsicElements | 'text',
         content: string | FormattedString,
@@ -27,6 +43,11 @@ export const jsxr = (tree: JSX.PrerenderNode[]) => {
         return fmt`${content}`;
     };
 
+    /**
+     * Recursively renders a JSX node and its children
+     * @param node - A JSX node or string to render
+     * @returns A formatted string containing the rendered content
+     */
     const render = (node: string | JSX.PrerenderNode): FormattedString => {
         if (typeof node === "string") return chunk("text", node);
         const { type, props } = node;
